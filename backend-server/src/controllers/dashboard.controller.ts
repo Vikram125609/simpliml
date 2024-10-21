@@ -254,7 +254,8 @@ export const get_analytics_data = async (
       request_graph: es_data[2].aggregations.requests_per_day.buckets,
     };
     return res.status(200).json({ data: analytics_data, success: true });
-  } catch (error: any) {
+  } catch (error : any) {
+    console.error(error)
     return res.status(500).json({
       message: 'Unexpected Error at Sevrer. Please try again!!',
       success: false,
@@ -448,7 +449,8 @@ export const get_quantitative_data = async (
     };
 
     return res.status(200).json({ data: quantitative_data, success: true });
-  } catch (error) {
+  } catch (error : any) {
+    console.error(error)
     return res.status(500).json({
       message: 'Unexpected Error at Sevrer. Please try again!!',
       success: false,
@@ -637,7 +639,8 @@ export const get_users_data = async (req: Request, res: Response) => {
     };
 
     return res.status(200).json({ data: users_data, success: true });
-  } catch (error) {
+  } catch (error : any) {
+    console.error(error)
     return res.status(500).json({
       message: 'Unexpected Error at Sevrer. Please try again!!',
       success: false,
@@ -778,7 +781,8 @@ export const get_models_data = async (req: Request, res: Response) => {
     };
 
     return res.status(200).json({ data: models_data, success: true });
-  } catch (error) {
+  } catch (error : any) {
+    console.error(error)
     return res.status(500).json({
       message: 'Unexpected Error at Sevrer. Please try again!!',
       success: false,
@@ -926,7 +930,8 @@ export const get_piechart_data = async (
     };
 
     return res.status(200).json({ data: piechart_data, success: true });
-  } catch (error) {
+  } catch (error : any) {
+    console.error(error)
     return res.status(500).json({
       message: 'Unexpected Error at Sevrer. Please try again!!',
       success: false,
